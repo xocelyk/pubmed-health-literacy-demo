@@ -2,10 +2,10 @@ import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import streamlit as st
 
-test_text = st.text_input("Enter your text here", "Patient is sleepy")
+test_text = st.text_input("Enter your text here", "Patient has dementia")
 
 
-checkpoint = './results/save1'
+checkpoint = '.'
 tokenizer = AutoTokenizer.from_pretrained(checkpoint)
 model = AutoModelForSequenceClassification.from_pretrained(checkpoint)
 
